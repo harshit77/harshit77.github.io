@@ -1,4 +1,3 @@
-
 body{font-family: "Open Sans", sans-serif;
 background:#fff;}
 .box-feature,.box-why,.box-howitworks{
@@ -236,6 +235,8 @@ outline:none;color:#fff}
 	background-image: none;
 	background-repeat: no-repeat;
 	text-shadow: none;
+	position:absolute;
+	top:-40%;
 }
 
 .carousel-control.left span {
