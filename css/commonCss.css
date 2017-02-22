@@ -1,11 +1,16 @@
+
 body{font-family: "Open Sans", sans-serif;
-background:#fff}
+background:#fff;}
 .box-feature,.box-why,.box-howitworks{
 margin-bottom:60px;
+
 }
 .section > .container {
-    padding-top: 80px;
-    padding-bottom: 80px;border-bottom: 1px solid #eee;
+     padding-top: 64px;
+    overflow: hidden;
+    width: inherit;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #eee;
 }
 .box-icon{display: inline-block;
     color: #12aaeb;
@@ -160,10 +165,10 @@ outline:none;color:#fff}
     margin-top: 30px;
 }
 #quote-carousel .carousel-control.left {
-    left: -60px;
+    left: 0;position:absolute;
 }
 #quote-carousel .carousel-control.right {
-    right: -60px;
+    right:25px;position:absolute;
 }
 #quote-carousel .carousel-indicators {
     right: 50%;
