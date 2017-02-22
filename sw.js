@@ -1,5 +1,5 @@
 var CACHE_NAME="my-site-cahe-version1";
-var urlToCache=['./css/commanCss.css','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
+var urlToCache=['https://harshit77.github.io/css/commonCss.css','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'];
 
