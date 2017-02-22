@@ -11,6 +11,7 @@ margin-bottom:60px;
     padding-bottom: 80px;
     border-bottom: 1px solid #eee;
 }
+
 .box-icon{display: inline-block;
     color: #12aaeb;
     font-size: 36px;
@@ -332,3 +333,6 @@ outline:none;color:#fff}
 
 }
 /* End of Banner */
+@media screen and (max-width: 768px){.section > .container {  padding-bottom:0;}.carousel-inner {
+    min-height: 210px;
+}}
