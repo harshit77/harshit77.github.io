@@ -446,12 +446,12 @@ console.warn("Error in get Subscription",err);
 function subscribe(){
 pushButton.disabled=true;
 navigator.serviceWorker.ready.then(function(serviceWorkerRegisteration){
-serviceWorkerRegisteration.pushManager.subscribe({userVisibleOnly: true}).then(function(subscribe){
+serviceWorkerRegisteration.pushManager.subscribe().then(function(subscribe){
 isPushEnabled=true;
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
 sendSubscriptionToServer(subscribe);
-console.log(PushSubscription.endpoint);
+console.log(subscribe.endpoint);
 }).catch(function(error){
 
 if(Notification.permission==="denied")
@@ -462,7 +462,7 @@ console.warn("Buddy Permission is denied");
 else{
 pushButton.textContent="Enable Push Message";
 pushButton.disabled=false;
-console.log("Something goes Wrong may network requerst or gcm Sender"); 
+console.log("Something goes Wrong may network requerst or gcm Sender"+error); 
 }
 
 
