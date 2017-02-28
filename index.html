@@ -450,8 +450,8 @@ serviceWorkerRegisteration.pushManager.subscribe({userVisibleOnly: true}).then(f
 isPushEnabled=true;
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
-sendSubscriptionToServer(subscribe);
 console.log(subscribe.endpoint);
+return sendSubscriptionToServer(subscribe);
 }).catch(function(error){
 
 if(Notification.permission==="denied")
