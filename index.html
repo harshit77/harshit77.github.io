@@ -451,7 +451,7 @@ isPushEnabled=true;
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
 sendSubscriptionToServer(subscribe);
-
+console.log(PushSubscription.endpoint);
 }).catch(function(error){
 
 if(Notification.permission==="denied")
@@ -468,7 +468,7 @@ console.log("Something goes Wrong may network requerst or gcm Sender");
 
 
 });
-console.log(PushSubscription.endpoint);
+
 
 });
 }
