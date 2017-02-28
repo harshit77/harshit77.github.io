@@ -446,7 +446,7 @@ console.warn("Error in get Subscription",err);
 function subscribe(){
 pushButton.disabled=true;
 navigator.serviceWorker.ready.then(function(serviceWorkerRegisteration){
-serviceWorkerRegisteration.pushManager.subscribe().then(function(subscribe){
+serviceWorkerRegisteration.pushManager.subscribe({userVisibleOnly: true}).then(function(subscribe){
 isPushEnabled=true;
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
