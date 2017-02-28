@@ -451,8 +451,7 @@ isPushEnabled=true;
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
 console.log(subscribe.endpoint);
-sendSubscriptionToServer(subscribe);  
-return;
+return sendSubscriptionToServer(subscribe);
 }).catch(function(error){
 
 if(Notification.permission==="denied")
