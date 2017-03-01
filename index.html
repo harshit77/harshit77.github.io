@@ -423,7 +423,7 @@ if(!subscription)
 {pushButton.disabled=false;
 return;
 }
-sendSubscriptionToServer(subscription);
+updateSubscriptionOnServer(subscription);
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
 
@@ -451,7 +451,7 @@ isPushEnabled=true;
 pushButton.textContent="Disable Push Message";
 pushButton.disabled=true;
 console.log(subscribe.endpoint);
-return sendSubscriptionToServer(subscribe);
+return updateSubscriptionOnServer(subscribe);
 }).catch(function(error){
 
 if(Notification.permission==="denied")
