@@ -63,3 +63,13 @@ self.addEventListener('push', function(event) {
     })  
   );  
 });
+self.addEventListener('notificationclick',function(event){
+	console.log("Received Notification Click"+event);
+	event.notification.close();
+	event.waitUntil(
+	clients.openWindow('http://google.co.in')
+	);
+	
+	
+	
+});
