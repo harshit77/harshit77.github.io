@@ -48,18 +48,43 @@ var fetchRequest=event.request.clone();
 
 
 self.addEventListener('push', function(event) {  
-  console.log('Received a push message', event);
 
-  var title = 'Yay a message.';  
-  var body = 'We have received a push message.';  
-  var icon = './images/service-img-6.jpg';  
-  var tag = 'simple-push-demo-notification-tag';
+ event.waitUntil(  
+    fetch("http://www.json-generator.com/api/json/get/ctSVbNVCGa").then(function(response) {  
+      if (response.status !== 200) {  
+        // Either show a message to the user explaining the error  
+        // or enter a generic message and handle the
+        // onnotificationclick event to direct the user to a web page  
+        console.log('Looks like there was a problem. Status Code: ' + response.status);  
+        throw new Error();  
+      }
 
-  event.waitUntil(  
-    self.registration.showNotification(title, {  
-      body: body,  
-      icon: icon,  
-      tag: tag  
+      // Examine the text in the response  
+      return response.json().then(function(data) {  
+       
+        var title = data.title;  
+        var message = data.message;  
+        var icon = './images/service-img-6.jpg';  
+        var notificationTag = data.notificationTag;
+
+        return self.registration.showNotification(title, {  
+          body: message,  
+          icon: icon,  
+          tag: notificationTag  
+        });  
+      });  
+    }).catch(function(err) {  
+      console.error('Unable to retrieve data', err);
+
+      var title = 'An error occurred';
+      var message = 'We were unable to get the information for this push message';  
+      var icon = './images/service-img-6.jpg';  
+      var notificationTag = 'notification-error';  
+      return self.registration.showNotification(title, {  
+          body: message,  
+          icon: icon,  
+          tag: notificationTag  
+        });  
     })  
   );  
 });
