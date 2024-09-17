@@ -2,7 +2,7 @@ import PinCard from '@/app/_components/projects/card'
 
 const pinCardItems=[{
     title:"harsh-ui",
-    href:"https://twitter.com/mannupaaji",
+    href:"https://github.com/harshit77/harsh-ui",
     heading:"Harsh UI Component Library",
     description:"A Component library build on top of React with Storybook.",
     children:   <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
