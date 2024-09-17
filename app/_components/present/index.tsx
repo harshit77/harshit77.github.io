@@ -7,7 +7,7 @@ import FlipWords from "@/app/_components/ui/flip-words"
 
 const cards=[{
   title:"Clean Architecture",
-  description:"Clean Architecture is a software design philosophy proposed by Robert C. Martin (Uncle Bob) that emphasizes the separation of concerns and the independence of components. Its main goals are to make software systems more maintainable, flexible, and scalable. <a href='https://github.com/harshit77/cleanArchitecture' class='text-white underline block'>Implemention details</a>",
+  description:"Clean Architecture is a software design philosophy proposed by Robert C. Martin (Uncle Bob) that emphasizes the separation of concerns and the independence of components. Its main goals are to make software systems more maintainable, flexible, and scalable. <a href='https://github.com/harshit77/nextjs-clean-architecture' class='text-white underline block'>Implemention details</a>",
   href:"https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
 },
 {
