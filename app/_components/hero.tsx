@@ -14,7 +14,6 @@ const Hero = () => {
 
   return (
     <div className="pb-20 w-full">
-     
        <Spotlight
         className="top-30 left-80 w-[50vw] h-[80vh]"
         fill="white"
@@ -25,23 +24,26 @@ const Hero = () => {
       />
       
       <GridBackground>
-         <div className="space-y-4 p-4 max-w-7xl mx-auto relative z-10  w-full pt-20 md:pt-0 flex flex-col justify-center items-center ">
-         <Image
-        src="/profile-photo.svg"
-        width={50}
-        height={50}
-        alt="Picture of the technology"
-        />
-          <TextGenerateEffect className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent" words="Transforming Concept into Seamless User Experience"/>
-            <p className="text-sm md:text-xl lg:text-2xl text-neutral-300 md:tracking-wider text-center">
-            Hi! I&apos;m <span className="font-bold">Harshit</span> , a Front-end developer based in India
-            </p>
-            <div className="flex gap-4">
-                <MagicButton title="Start exploring" href="#projects"  icon={<FaCompass/>}/>
-                <Button label="GitHub" to="https://github.com/harshit77" icon={<FaGithub/>}/>
-                <Button label="Download Resume" href={RESUME_URL} download icon={<FaDownload/>}/>
+         <div className="space-y-4 p-4 max-w-7xl mx-auto relative z-10  w-full md:pt-0 flex flex-col justify-center items-center ">
+          <div className="relative h-40 w-40 flex justify-center items-center mt-10">
+              <Image
+                src="/profile-photo.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Profile Photo"
+              />
             </div>
-        </div>
+            
+              <TextGenerateEffect className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent m-0" words="Bringing Concepts to Life with Seamless User Experiences"/>
+                <p className="text-sm md:text-xl lg:text-2xl text-neutral-300 md:tracking-wider text-center">
+                Hi! I&apos;m <span className="font-bold">Harshit</span> , a Front-end developer based in India
+                </p>
+                <div className="flex justify-center gap-4">
+                    <MagicButton title="Start exploring" href="#projects"  icon={<FaCompass/>}/>
+                    <Button label="GitHub" to="https://github.com/harshit77" icon={<FaGithub/>}/>
+                    <Button label="Download Resume" href={RESUME_URL} download icon={<FaDownload/>}/>
+                </div>
+              </div>
         </GridBackground> 
     </div>
   )
