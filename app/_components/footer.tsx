@@ -18,7 +18,7 @@ const socialMedias=[{
 
 const Footer = () => {
   return (
-    <div className="flex justify-between text-white py-10">
+    <div className="flex justify-between items-center text-white py-10">
         <div>Copyright &copy; 2024 Harshit Sahu</div>
         <div className="flex gap-2">
             {socialMedias.map((socialMedia,index)=><SocialMedia key={index} {...socialMedia}/>)}
