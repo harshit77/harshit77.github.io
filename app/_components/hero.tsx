@@ -38,7 +38,7 @@ const Hero = () => {
                 <p className="text-sm md:text-xl lg:text-2xl text-neutral-300 md:tracking-wider text-center">
                 Hi! I&apos;m <span className="font-bold">Harshit</span> , a Front-end developer based in India
                 </p>
-                <div className="flex justify-center gap-4">
+                <div className="grid md:grid-cols-3 grid-cols-1  gap-4">
                     <MagicButton title="Start exploring" href="#projects"  icon={<FaCompass/>}/>
                     <Button label="GitHub" to="https://github.com/harshit77" icon={<FaGithub/>}/>
                     <Button label="Download Resume" href={RESUME_URL} download icon={<FaDownload/>}/>
