@@ -21,7 +21,7 @@ const words = ["Clean", "Beautiful", "Modern","Maintainable","Expandable"];
 export default function Present() {
   return (
     <div className="flex flex-col space-y-10 bg-grid-small-black pt-10" id="pattern">
-      <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+      <div className="text-4xl mx-auto font-normal text-neutral-400">
         Building
         <FlipWords words={words} className="text-purple" />
         Web using below <span className="text-white">Architectures</span>
@@ -30,7 +30,7 @@ export default function Present() {
     <LampContainer>
       <motion.h1
         initial={{ opacity: 0.5, y: 300 }}
-        whileInView={{ opacity: 1, y: 180 }}
+        whileInView={{ opacity: 1, y: 200 }}
         transition={{
           delay: 0.3,
           duration: 0.8,
