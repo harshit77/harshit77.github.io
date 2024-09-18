@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className="pb-20 w-full">
        <Spotlight
-        className="top-30 left-80 w-[50vw] h-[80vh]"
+        className="-top-10 h-[100vh] w-[100vw] sm:left-80 sm:w-[50vw] sm:h-[80vh]"
         fill="white"
       />
       <Spotlight
@@ -24,8 +24,8 @@ const Hero = () => {
       />
       
       <GridBackground>
-         <div className="space-y-4 p-4 max-w-7xl mx-auto relative z-10  w-full md:pt-0 flex flex-col justify-center items-center ">
-          <div className="relative h-40 w-40 flex justify-center items-center mt-10">
+         <div className="space-y-3 p-4 max-w-7xl mx-auto relative z-10  w-full md:pt-0 flex flex-col justify-center items-center ">
+          <div className="relative h-36 w-36 flex justify-center items-center mt-36 sm:mt-24">
               <Image
                 src="/profile-photo.png"
                 layout="fill"
@@ -34,7 +34,7 @@ const Hero = () => {
               />
             </div>
             
-              <TextGenerateEffect className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent m-0" words="Bringing Concepts to Life with Seamless User Experiences"/>
+              <TextGenerateEffect className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent m-0" words="Bringing Concepts to Life with Seamless User Experiences "/>
                 <p className="text-sm md:text-xl lg:text-2xl text-neutral-300 md:tracking-wider text-center">
                 Hi! I&apos;m <span className="font-bold">Harshit</span> , a Front-end developer based in India
                 </p>
