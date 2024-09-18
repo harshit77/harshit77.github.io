@@ -6,18 +6,27 @@ import { cn } from "@/lib/utils";
 type ButtonProps={
     label:string,
     href?:string,
+    to?:string,
     className?:string,
     icon?:React.ReactNode
-    iconPosition?: "left" |"right"
+    iconPosition?: "left" |"right",
+    download?: boolean
     handleClick?:(event:MouseEvent<HTMLButtonElement>)=> void
 }
 
-const Button = ({label,href,className,icon, iconPosition="right",handleClick}:ButtonProps) => {
+const Button = ({label,href,to,className,icon, iconPosition="right",download,handleClick}:ButtonProps) => {
   let RenderedComponent:ElementType, elementSpecificProps;
-  if(href) {
+  if(to) {
     RenderedComponent= Link;
     elementSpecificProps={
-      href
+      href:to,
+    }
+  }
+  else if(href) {
+    RenderedComponent= "a";
+    elementSpecificProps={
+      href,
+      download
     }
   }
   else {

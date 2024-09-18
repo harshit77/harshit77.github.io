@@ -7,15 +7,14 @@ import TextGenerateEffect  from "@/app/_components/ui/text-generate-effect";
 import MagicButton from "@/app/_components/ui/magic-button";
 import { FaCompass, FaDownload, FaGithub } from "react-icons/fa";
 import Button from "@/app/_components/button";
+import {RESUME_URL} from "@/lib/constants"
 
 
 const Hero = () => {
+
   return (
     <div className="pb-20 w-full">
-      {/* <Spotlight
-        className="top-10 left-70 w-[50vw] h-[80vh]"
-        fill="white"
-      /> */}
+     
        <Spotlight
         className="top-30 left-80 w-[50vw] h-[80vh]"
         fill="white"
@@ -38,9 +37,9 @@ const Hero = () => {
             Hi! I&apos;m <span className="font-bold">Harshit</span> , a Front-end developer based in India
             </p>
             <div className="flex gap-4">
-              <MagicButton title="Start exploring"  icon={<FaCompass/>}/>
-               <Button label="GitHub" href="https://github.com/harshit77" icon={<FaGithub/>}/>
-                <Button label="Download Resume" href="/harshit_sahu_resume.pdf" icon={<FaDownload/>}/>
+                <MagicButton title="Start exploring" href="#projects"  icon={<FaCompass/>}/>
+                <Button label="GitHub" to="https://github.com/harshit77" icon={<FaGithub/>}/>
+                <Button label="Download Resume" href={RESUME_URL} download icon={<FaDownload/>}/>
             </div>
         </div>
         </GridBackground> 
